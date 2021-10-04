@@ -1,0 +1,12 @@
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\bin\Debug\net5.0\StarWarsResistence.ApiClient.deps.json
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\bin\Debug\net5.0\StarWarsResistence.ApiClient.dll
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\bin\Debug\net5.0\ref\StarWarsResistence.ApiClient.dll
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\bin\Debug\net5.0\StarWarsResistence.ApiClient.pdb
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.csproj.AssemblyReference.cache
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.AssemblyInfoInputs.cache
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.AssemblyInfo.cs
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.csproj.CoreCompileInputs.cache
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.dll
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\ref\StarWarsResistence.ApiClient.dll
+C:\Users\dchio_000\source\repos\StarWarsResistence\StarWarsResistence\client\StarWarsResistence.ApiClient\obj\Debug\net5.0\StarWarsResistence.ApiClient.pdb

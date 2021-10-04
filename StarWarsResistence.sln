@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CE1BCDF0-4D96-4446-8297-D0DD861D8053}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{011CF518-CEB0-4928-AC94-B1C49ACA9FDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{BEF441E7-5BF1-489F-A80D-4A43A6A8A910}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsResistence.Api", "StarWarsResistence\src\StarWarsResistence.Api\StarWarsResistence.Api.csproj", "{224A5657-F012-4F47-A203-4D9CE34EBC07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsResistence.Model", "StarWarsResistence\src\StarWarsResistence.Model\StarWarsResistence.Model.csproj", "{3E49A2C0-FD69-4753-97C3-72A4B74C2A77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsResistence.ApiClient", "StarWarsResistence\client\StarWarsResistence.ApiClient\StarWarsResistence.ApiClient.csproj", "{B510B306-8502-4837-8D0C-9F80069ED2F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsResistence.Api.Tests", "StarWarsResistence\test\StarWarsResistence.Api.Tests\StarWarsResistence.Api.Tests.csproj", "{DAB537AA-F5B1-496A-B810-C179EDF653E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{224A5657-F012-4F47-A203-4D9CE34EBC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224A5657-F012-4F47-A203-4D9CE34EBC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224A5657-F012-4F47-A203-4D9CE34EBC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224A5657-F012-4F47-A203-4D9CE34EBC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E49A2C0-FD69-4753-97C3-72A4B74C2A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E49A2C0-FD69-4753-97C3-72A4B74C2A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E49A2C0-FD69-4753-97C3-72A4B74C2A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E49A2C0-FD69-4753-97C3-72A4B74C2A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B510B306-8502-4837-8D0C-9F80069ED2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B510B306-8502-4837-8D0C-9F80069ED2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B510B306-8502-4837-8D0C-9F80069ED2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B510B306-8502-4837-8D0C-9F80069ED2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB537AA-F5B1-496A-B810-C179EDF653E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB537AA-F5B1-496A-B810-C179EDF653E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB537AA-F5B1-496A-B810-C179EDF653E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB537AA-F5B1-496A-B810-C179EDF653E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{224A5657-F012-4F47-A203-4D9CE34EBC07} = {CE1BCDF0-4D96-4446-8297-D0DD861D8053}
+		{3E49A2C0-FD69-4753-97C3-72A4B74C2A77} = {CE1BCDF0-4D96-4446-8297-D0DD861D8053}
+		{B510B306-8502-4837-8D0C-9F80069ED2F1} = {BEF441E7-5BF1-489F-A80D-4A43A6A8A910}
+		{DAB537AA-F5B1-496A-B810-C179EDF653E9} = {011CF518-CEB0-4928-AC94-B1C49ACA9FDE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99A217CD-5219-4CEC-8D53-0AE640811B5E}
+	EndGlobalSection
+EndGlobal
