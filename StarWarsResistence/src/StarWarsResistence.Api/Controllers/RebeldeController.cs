@@ -21,13 +21,14 @@ namespace StarWarsResistence.Api.Controllers
         private ApiContext _context;
 
         private readonly ILogger<RebeldeController> _logger;
-        private readonly IDapperRepository _dapperRepository;
+        //private readonly IDapperRepository _dapperRepository;
         private readonly IApiRepository _apiRepository;
-
-        public RebeldeController(ILogger<RebeldeController> logger, IDapperRepository dapperRepository, IApiRepository apiRepository, ApiContext context)
+        
+        //IDapperRepository dapperRepository,
+        public RebeldeController(ILogger<RebeldeController> logger,  IApiRepository apiRepository, ApiContext context)
         {
             _logger = logger;
-            _dapperRepository = dapperRepository;
+           // _dapperRepository = dapperRepository;
             _apiRepository = apiRepository;
             _context = context;
         }
@@ -56,8 +57,8 @@ namespace StarWarsResistence.Api.Controllers
                 idade = 20,
                 genero = Model.Entities.Rebelde.Genero.Indefinido, 
                 listaInventario = new Model.Entities.Rebelde.Inventario(), 
-                localizacao = new Model.Entities.Rebelde.Coordenadas(), 
-                statusRebelde = Model.Entities.Rebelde.StatusRebelde.Aliado
+                statusRebelde = Model.Entities.Rebelde.StatusRebelde.Aliado,
+                nomeBase = "Aldebaran" 
             })
             .ToArray();
 
@@ -80,90 +81,36 @@ namespace StarWarsResistence.Api.Controllers
 
         }
 
-        ///////// <summary>
-        ///////// Atualizar Coordenadas Geograficas
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult AtualizarCoordenadas([FromRoute] WeatherType type)
-        //////{
 
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
+        /// <summary>
+        /// Reportar Traidor
+        /// </summary>
+        /// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
+        [HttpPut]
+        [ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
+        public IActionResult ReportarTraidor(int idRebelde1, int idRebelde2, int idRebelde3, int idRebeldeTraidor)
+        {
+            Model.Entities.Rebelde rebeldeTraidor = _context.Rebeldes.FirstOrDefault(rebeldeTraidor=> rebeldeTraidor.Id == idRebeldeTraidor);
+            if (idRebelde1 != 0 && idRebelde2 != 0 && idRebelde3 != 0)
+            {
+                rebeldeTraidor.statusRebelde = Model.Entities.Rebelde.StatusRebelde.Traidor;
+                _context.SaveChanges();
+                
+            }
+            else
+            {
+                return Notfound();
+            }
 
-        ///////// <summary>
-        ///////// Reportar Traidor
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ReportarTraidor([FromRoute] WeatherType type)
-        //////{
+            
+            return NoContent();
+        }
 
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
+        private IActionResult Notfound()
+        {
+            throw new NotImplementedException();
+        }
 
-
-        ///////// <summary>
-        ///////// Negociar Itens rebeldes entre si
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult NegociarItens([FromRoute] WeatherType type)
-        //////{
-
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
-
-
-
-
-
-
-
-
-
-        ///////// <summary>
-        /////////Listar Percentual de Aliados ou Traidores conforme status recebido
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarPercentualStatus([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Percentual de Aliados ou Traidores conforme status recebido
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
-
-        ///////// <summary>
-        /////////Listar Média de recursos por rebelde e por tipo de recurso
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarMediaRecursosPorRebelde([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Média de recursos por rebelde e por tipo de recurso
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
-
-        ///////// <summary>
-        ///////// Listar Quantidade de pontos dos rebeldes traidores
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarPontosPerdidos([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Quantidade de pontos dos rebeldes traidores
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
 
 
     }

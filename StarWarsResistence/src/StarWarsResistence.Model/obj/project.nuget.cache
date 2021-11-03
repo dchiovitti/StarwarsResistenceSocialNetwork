@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YAylsYP5qEvGheKDp5yFFK/qONz+/nw98VS65qH210/vyJ/6x0A8Zz9Qe5JEtnr7rbycYdEZuF+Ra8A1HQGx2Q==",
+  "dgSpecHash": "H0RfoNEWe4kf47yw9qfCOnzZAsKBy9jGhxSCxseJ93ub3cq/Ry7vXfVdWKZQo5b/VVmUM3iRM+lcm72k3+HEug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj",
+  "projectFilePath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dchio_000\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\dchio_000\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",

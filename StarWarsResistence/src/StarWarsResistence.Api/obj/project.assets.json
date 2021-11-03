@@ -9780,11 +9780,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Api\\StarWarsResistence.Api.csproj",
+      "projectUniqueName": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Api\\StarWarsResistence.Api.csproj",
       "projectName": "StarWarsResistence.Api",
-      "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Api\\StarWarsResistence.Api.csproj",
+      "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Api\\StarWarsResistence.Api.csproj",
       "packagesPath": "C:\\Users\\dchio_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Api\\obj\\",
+      "outputPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dchio_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9801,8 +9801,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj": {
-              "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj"
+            "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj": {
+              "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\src\\StarWarsResistence.Model\\StarWarsResistence.Model.csproj"
             }
           }
         }
@@ -9882,7 +9882,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -19,13 +19,14 @@ namespace StarWarsResistence.Api.Controllers
         //private static List<Rebelde> rebeldes = new List<Rebelde>();
 
         private readonly ILogger<RelatorioController> _logger;
-        private readonly IDapperRepository _dapperRepository;
+        //private readonly IDapperRepository _dapperRepository;
         private readonly IApiRepository _apiRepository;
         private readonly ApiContext _context;
-        public RelatorioController(ILogger<RelatorioController> logger, IDapperRepository dapperRepository, IApiRepository apiRepository, ApiContext context)
+        //IDapperRepository dapperRepository,
+        public RelatorioController(ILogger<RelatorioController> logger,  IApiRepository apiRepository, ApiContext context)
         {
             _logger = logger;
-            _dapperRepository = dapperRepository;
+           // _dapperRepository = dapperRepository;
             _apiRepository = apiRepository;
             _context = context;
         }
@@ -84,90 +85,125 @@ namespace StarWarsResistence.Api.Controllers
 
         }
 
-        ///////// <summary>
-        ///////// Atualizar Coordenadas Geograficas
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult AtualizarCoordenadas([FromRoute] WeatherType type)
-        //////{
-
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
-
-        ///////// <summary>
-        ///////// Reportar Traidor
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ReportarTraidor([FromRoute] WeatherType type)
-        //////{
-
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
 
 
-        ///////// <summary>
-        ///////// Negociar Itens rebeldes entre si
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult NegociarItens([FromRoute] WeatherType type)
-        //////{
+        /// <summary>
+        ///Listar Percentual de Aliados ou Traidores conforme status recebido
+        /// </summary>
+        /// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
+        
 
-        //////    var result = "Ok";
-        //////    return Ok(result);
-        //////}
+        [HttpGet]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        public IActionResult ListarPercentualStatus(Model.Entities.Rebelde.StatusRebelde status)
+
+        {
+       
+            List<Model.Entities.Rebelde> rebeldesPorStatus = _context.Rebeldes.Where(row => row.statusRebelde == status).ToList();
+            
+            List<Model.Entities.Rebelde> totalRebeldes= _context.Rebeldes.ToList();
+
+            float qtdTotalRebeldes = totalRebeldes.Count();
+
+            float qtdRebeldesPorStatus = rebeldesPorStatus.Count();
+
+            float percentualRebeldesPorStatus = (qtdRebeldesPorStatus / qtdTotalRebeldes) * 100;
+
+            string statustxt = status.Equals(Model.Entities.Rebelde.StatusRebelde.Aliado)? "Aliado " + percentualRebeldesPorStatus.ToString() : "Traidor " + percentualRebeldesPorStatus.ToString();
+
+            var result = statustxt;
+
+            return Ok(result);
+        }
+
+        /// <summary>
+        ///Listar Média de recursos por rebelde e por tipo de recurso
+        /// </summary>
+        /// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
+        public IActionResult ListarMediaRecursosPorRebelde()
+        {
+            //Listar Média de recursos por rebelde e por tipo de recurso
+
+            //Listar a quantidade de rebeldes
+
+            List<Model.Entities.Rebelde> totalRebeldes = _context.Rebeldes.ToList();
+
+            float qtdTotalRebeldes = totalRebeldes.Count();
 
 
+            //Listar a quantidade total de recursos na tabela de inventario
 
+            List<Model.Entities.Inventario> lstarmas = _context.Inventario.Where(row => row.Item == "arma").ToList();
+                   
+            List<Model.Entities.Inventario> lstmunicao = _context.Inventario.Where(row => row.Item == "municao").ToList();
 
+            List<Model.Entities.Inventario> lstagua = _context.Inventario.Where(row => row.Item == "agua").ToList();
+            
+            List<Model.Entities.Inventario> lstcomida = _context.Inventario.Where(row => row.Item == "comida").ToList();
 
+            int qtdArmas = lstarmas.Count();
+            int qtdMunicao = lstmunicao.Count();
+            int qtdAgua = lstagua.Count();
+            int qtdComida = lstcomida.Count();
 
+            float percentualPorRebelde1 = qtdArmas / qtdTotalRebeldes * 100;
+            float percentualPorRebelde2 = qtdMunicao / qtdTotalRebeldes * 100;
+            float percentualPorRebelde3 = qtdAgua / qtdTotalRebeldes * 100;
+            float percentualPorRebelde4 = qtdComida / qtdTotalRebeldes * 100;
 
+            string statustxt = "Percentual por rebeldes de: 1)Armas  =>" + percentualPorRebelde1.ToString() + "; Municao=>" + percentualPorRebelde2.ToString() + ";Agua=>" + percentualPorRebelde3.ToString() + ";comida=>" + percentualPorRebelde4.ToString();
 
+            var result = statustxt;
 
-        ///////// <summary>
-        /////////Listar Percentual de Aliados ou Traidores conforme status recebido
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarPercentualStatus([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Percentual de Aliados ou Traidores conforme status recebido
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
+            return Ok(result);
+        }
 
-        ///////// <summary>
-        /////////Listar Média de recursos por rebelde e por tipo de recurso
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarMediaRecursosPorRebelde([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Média de recursos por rebelde e por tipo de recurso
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
+        /// <summary>
+        /// Listar Quantidade de pontos dos rebeldes traidores
+        /// </summary>
+        /// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
 
-        ///////// <summary>
-        ///////// Listar Quantidade de pontos dos rebeldes traidores
-        ///////// </summary>
-        ///////// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
+        [HttpGet]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        public IActionResult ListarPontosPerdidos()
+        {
 
-        //////[HttpPost]
-        //////[ProducesResponseType(typeof(IEnumerable<Rebelde>), (int)HttpStatusCode.OK)]
-        //////public IActionResult ListarPontosPerdidos([FromRoute] StatusRebelde status)
-        //////{
-        //////    //Listar Quantidade de pontos dos rebeldes traidores
-        //////    throw new InvalidOperationException("Threw exception!");
-        //////}
+            //Listar Quantidade de pontos dos rebeldes traidores
+
+            //1 - Listar os traidores
+
+            List<Model.Entities.Rebelde> lstTraidores = _context.Rebeldes.Where(row => row.statusRebelde.Equals("1")).ToList();
+
+            //Listar o Inventario
+
+            List<Model.Entities.Inventario> lstItens = _context.Inventario.ToList();
+
+            //2 - Contar os pontos que os traidores tem no inventario
+
+            float pontosPerdidos = 0;
+
+            foreach (Model.Entities.Rebelde item in lstTraidores)
+            {
+                //1 - subtrair o item da Lista do Rebelde1
+                foreach (Model.Entities.Inventario itemNovo in lstItens)
+                {
+                    if (item.Id == itemNovo.idRebelde)
+                    {
+                        pontosPerdidos += itemNovo.Quantidade * itemNovo.Pontos;
+                        //break; não para porque pode ter mais de um item
+                    }
+                }
+              
+            }
+
+            string statustxt = "Pontos perdido para os traidores: =>" + pontosPerdidos.ToString();
+
+            var result = statustxt;
+
+            return Ok(result);
+        }
 
 
     }

@@ -14,6 +14,11 @@ namespace StarWarsResistence.Model
 
         public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Rebelde> Rebeldes { get; set; }
+
+        public virtual DbSet<Localizacao> Localizacao {get; set;}
+
+        public virtual DbSet<Inventario> Inventario { get; set; }
+
         public ApiContext(DbContextOptions<ApiContext> options) : base(options)
         {
         }
@@ -56,6 +61,28 @@ namespace StarWarsResistence.Model
                 e.ToTable(nameof(MyEntity), UsedSchema);
                 e.HasKey(p => p.Id);
             });
+
+            modelBuilder.HasDefaultSchema(UsedSchema);
+            modelBuilder.Entity <Rebelde>(e =>
+            {
+                e.ToTable(nameof(Rebelde), UsedSchema);
+                e.HasKey(p => p.Id);
+            });
+
+            modelBuilder.HasDefaultSchema(UsedSchema);
+            modelBuilder.Entity<Localizacao>(e =>
+            {
+                e.ToTable(nameof(Localizacao), UsedSchema);
+                e.HasKey(p => p.Id);
+            });
+
+            modelBuilder.HasDefaultSchema(UsedSchema);
+            modelBuilder.Entity<Inventario>(e =>
+            {
+                e.ToTable(nameof(Inventario), UsedSchema);
+                e.HasKey(p => p.Id);
+            });
+
         }
     }
 }

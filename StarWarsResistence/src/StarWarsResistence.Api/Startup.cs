@@ -24,9 +24,13 @@ namespace StarWarsResistence.Api
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
             : base(configuration, environment)
         {
+            Configuration = configuration;
         }
 
+        public IConfiguration Configuration { get; }
+
         public override void ConfigureServices(IServiceCollection services)
+        
         {
             services.AddDbContext<ApiContext>(options => options.UseMySQL(Configuration.GetConnectionString("DatabaseContext"), b => b.MigrationsAssembly("StarWarsResistence.Api")));
 

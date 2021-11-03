@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WWcLKf5r6c6AHMEmzXf53VjNEwj2ypxk4fT4xpOigDuztEhiSzdi4fBCfW/7v10XB1tOyPQQVc4R9nq/m8e2Bw==",
+  "dgSpecHash": "FYGPwnOHxQSgy2C7bzvwFjL0ZXE4SKEGgyJjOH0HjL/TEPBumbJmfMW966DCerNYtlE3tp8TkmH4MDxdgOSlEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
+  "projectFilePath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dchio_000\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\dchio_000\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

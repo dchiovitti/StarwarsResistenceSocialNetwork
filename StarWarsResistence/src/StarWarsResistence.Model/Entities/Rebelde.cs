@@ -12,15 +12,17 @@ namespace StarWarsResistence.Model.Entities
         public string nome { get; set; }
       
         public uint idade { get; set; }
-       
+        
         public Genero genero { get; set; }
 
-        [NotMapped]
-        public Coordenadas localizacao { get; set; }
+        //public int idLocalizacao { get; set; }
         [NotMapped]
         public Inventario listaInventario { get; set; }
         
         public StatusRebelde statusRebelde { get; set; }
+
+        public string nomeBase { get; set; }
+
         public enum Genero { Masculino, Feminino, Indefinido }
         public struct Coordenadas
         {

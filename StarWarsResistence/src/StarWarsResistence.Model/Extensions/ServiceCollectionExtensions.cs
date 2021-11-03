@@ -11,7 +11,7 @@ namespace StarWarsResistence.Model.Extensions
         public static IServiceCollection AddModelDependencies(this IServiceCollection services, IConfiguration configuration, bool isProduction)
         {
             services.AddSingleton<IConfiguration>(_ => configuration);
-            services.AddSingleton<IDapperRepository, DapperRepository>();
+            //services.AddSingleton<IDapperRepository, DapperRepository>();
             services.AddScoped<IApiRepository, ApiRepository>();
 
             // AddDbContext
@@ -23,6 +23,9 @@ namespace StarWarsResistence.Model.Extensions
                         configuration.GetConnectionString("DatabaseContext"),
                         sqlOptions => sqlOptions.MigrationsHistoryTable(HistoryRepository.DefaultTableName, ApiContext.UsedSchema)
                     );
+
+                    //services.AddDbContext<ApiContext>(options => options.UseMySQL(Configuration.GetConnectionString("DatabaseContext"), b => b.MigrationsAssembly("StarWarsResistence.Api")));
+
                 }
                 else
                 {

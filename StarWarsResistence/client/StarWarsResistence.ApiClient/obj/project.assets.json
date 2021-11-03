@@ -1485,11 +1485,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
+      "projectUniqueName": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
       "projectName": "StarWarsResistence.ApiClient",
-      "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
+      "projectPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\StarWarsResistence.ApiClient.csproj",
       "packagesPath": "C:\\Users\\dchio_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\obj\\",
+      "outputPath": "C:\\Users\\dchio_000\\Source\\Repos\\StarwarsResistenceSocialNetwork2\\StarWarsResistence\\client\\StarWarsResistence.ApiClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dchio_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1542,7 +1542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

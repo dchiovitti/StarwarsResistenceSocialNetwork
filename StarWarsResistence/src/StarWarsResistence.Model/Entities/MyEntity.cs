@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+ 
+
 namespace StarWarsResistence.Model.Entities
 {
     public class MyEntity
