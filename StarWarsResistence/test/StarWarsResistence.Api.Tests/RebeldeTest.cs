@@ -13,13 +13,13 @@ using StarWarsResistence.Api;
 
 namespace StarWarsResistence.Api.Tests
 {
-    public class UnitTest1
+    public class RebeldeTest
     {
 
         private readonly IRebelde _apiRebelde;
 
         [Fact]
-        public async Task TesteIncluirRebelde_OkAsync()
+        public bool TesteIncluirRebelde_OkAsync()
         {
             //Arrange
             Rebelde novoRebelde = new Rebelde();
@@ -45,7 +45,7 @@ namespace StarWarsResistence.Api.Tests
             var response =  (novoRebelde);
             //response.StatusCode.Should().Be(HttpStatusCode.OK, $"* Ocorreu uma falha: Status code esperado (200,ok) diferente do resultado gerado *");
 
-            
+            return true;
 
         }
     }

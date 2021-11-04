@@ -6,6 +6,7 @@ namespace StarWarsResistence.Api
 {
     public class Rebelde
     {
+        [Key]
         [Required(ErrorMessage = "O campo Id não pode ser vazio")]
         public int Id { get; set; }
         [Required(ErrorMessage = "O campo nome não pode ser vazio")]
@@ -15,9 +16,6 @@ namespace StarWarsResistence.Api
         [Required(ErrorMessage = "O campo genero não pode ser vazio")]
         public Genero genero { get; set; }
 
-        // public int  idLocalizacao { get; set; }
-        [NotMapped]
-        public Inventario listaInventario { get; set; }
         [Required(ErrorMessage = "O campo status não pode ser vazio")]
         public StatusRebelde statusRebelde { get; set; }
 
@@ -35,13 +33,13 @@ namespace StarWarsResistence.Api
                 Longitude = longitude;
             }
         }
-        public struct Inventario
+        private struct Inventario
         {
             public int CodigoItem;
             public string Item;
             public int Pontos;
             public int Quantidade;
-            public Inventario(int codigoItem, string item, int pontos, int quantidade)
+            private Inventario(int codigoItem, string item, int pontos, int quantidade)
             {
                 CodigoItem = codigoItem;
                 Item = item;

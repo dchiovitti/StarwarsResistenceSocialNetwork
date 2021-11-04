@@ -22,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\client\StarWarsResistence.ApiClient\StarWarsResistence.ApiClient.csproj" />
+    <ProjectReference Include="..\..\src\StarWarsResistence.Api\StarWarsResistence.Api.csproj" />
     <ProjectReference Include="..\..\src\StarWarsResistence.Model\StarWarsResistence.Model.csproj" />
   </ItemGroup>
 

@@ -6,6 +6,8 @@ namespace StarWarsResistence.Api
 {
     public class Inventario
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
         public int idRebelde { get; set; }
         public string Item { get; set; }

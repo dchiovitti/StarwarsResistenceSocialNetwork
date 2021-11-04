@@ -33,40 +33,7 @@ namespace StarWarsResistence.Api.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// Get Rebelde
-        /// </summary>
-        /// <response code="200">Returns IEnumerable of <see cref="Model.Entities.Rebelde"/></response>
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Model.Entities.Rebelde>), (int) HttpStatusCode.OK)]
-        public IActionResult Get()
-        {
-            int rng = 0;
-            //var result = Enumerable.Range(1, 5).Select(index => new Rebelde
-            //{
-            //    Date = DateTime.Now.AddDays(index),
-            //    TemperatureC = rng.Next(-20, 55),
-            //    Summary = Summaries[rng.Next(Summaries.Length)]
-            //})
-            //.ToArray();
-
-            var result = Enumerable.Range(1, 5).Select(index => new Model.Entities.Rebelde
-            {
-                Id = rng+1,
-                nome = "Rebelde1",
-                idade = 20,
-                genero = Model.Entities.Rebelde.Genero.Indefinido, 
-                listaInventario = new Model.Entities.Rebelde.Inventario(), 
-                //localizacao = new Model.Entities.Rebelde.Coordenadas(), 
-                statusRebelde = Model.Entities.Rebelde.StatusRebelde.Aliado
-            })
-            .ToArray();
-
-            return Ok(result);
-        }
-
-
-
+        
         /// <summary>
         /// Atualizar Localizacao Rebelde
         /// </summary>

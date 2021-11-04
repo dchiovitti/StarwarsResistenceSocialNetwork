@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace StarWarsResistence.Api
 {
     public class Localizacao
-    {
+    {   [Key]
         [Required(ErrorMessage = "O campo Id não pode ser vazio")]
         public int Id { get; set; }
         public int IdRebelde { get; set; }

@@ -6,6 +6,7 @@ namespace StarWarsResistence.Model.Entities
 {
     public class Localizacao
     {
+        [Key]
         [Required(ErrorMessage = "O campo Id não pode ser vazio")]
         public int Id { get; set; }
         public int IdRebelde { get; set; }

@@ -24,10 +24,10 @@ namespace StarWarsResistence.Api
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
             : base(configuration, environment)
         {
-            Configuration = configuration;
+            //Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        //public new IConfiguration Configuration { get; }
 
         public override void ConfigureServices(IServiceCollection services)
         

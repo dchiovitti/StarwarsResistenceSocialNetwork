@@ -4,29 +4,17 @@
         <name>StarWarsResistence.Api</name>
     </assembly>
     <members>
-        <member name="M:StarWarsResistence.Api.Controllers.InventarioController.NegociarItensEntreRebeldes(System.Int32,System.Int32,System.Collections.Generic.List{StarWarsResistence.Model.Entities.Inventario},System.Collections.Generic.List{StarWarsResistence.Model.Entities.Inventario})">
+        <member name="M:StarWarsResistence.Api.Controllers.InventarioController.NegociarItensEntreRebeldes(System.Int32,System.Int32,System.Collections.Generic.List{StarWarsResistence.Model.Entities.Inventario})">
             <summary>
             Negociar itens Inventario entre Rebeldes
             </summary>
             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Inventario"/></response>
-        </member>
-        <member name="M:StarWarsResistence.Api.Controllers.LocalizacaoController.Get">
-            <summary>
-            Get Rebelde
-            </summary>
-            <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Rebelde"/></response>
         </member>
         <member name="M:StarWarsResistence.Api.Controllers.LocalizacaoController.AtualizarLocalizacaoRebelde(System.Int32,StarWarsResistence.Model.Entities.Localizacao)">
             <summary>
             Atualizar Localizacao Rebelde
             </summary>
             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Localizacao"/></response>
-        </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RebeldeController.Get">
-            <summary>
-            Get Rebelde
-            </summary>
-            <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Rebelde"/></response>
         </member>
         <member name="M:StarWarsResistence.Api.Controllers.RebeldeController.Search(StarWarsResistence.Model.Entities.Rebelde)">
             <summary>
@@ -38,7 +26,13 @@
             <summary>
             Reportar Traidor
             </summary>
-            <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
+            <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Rebelde"/></response>
+        </member>
+        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController3.ListarPontosPerdidos">
+            <summary>
+            Listar Quantidade de pontos dos rebeldes traidores
+            </summary>
+            <response code="200">Returns string</response>
         </member>
         <member name="M:StarWarsResistence.Api.Controllers.RelatorioController.Search(StarWarsResistence.Model.Entities.Rebelde.StatusRebelde)">
             <summary>
@@ -46,23 +40,17 @@
             </summary>
             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
         </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController.ListarPercentualStatus(StarWarsResistence.Model.Entities.Rebelde.StatusRebelde)">
+        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController1.ListarPercentualStatus(StarWarsResistence.Model.Entities.Rebelde.StatusRebelde)">
              <summary>
             Listar Percentual de Aliados ou Traidores conforme status recebido
              </summary>
-             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
+             <response code="200">Returns string</response>
         </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController.ListarMediaRecursosPorRebelde">
+        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController2.ListarMediaRecursosPorRebelde">
              <summary>
             Listar Média de recursos por rebelde e por tipo de recurso
              </summary>
-             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
-        </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController.ListarPontosPerdidos">
-            <summary>
-            Listar Quantidade de pontos dos rebeldes traidores
-            </summary>
-            <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
+             <response code="200">Returns string</response>
         </member>
     </members>
 </doc>

@@ -17,6 +17,53 @@ namespace StarWarsResistence.Model.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.4");
 
+            modelBuilder.Entity("StarWarsResistence.Model.Entities.Inventario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Item")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Pontos")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.Property<int>("idRebelde")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Inventario", "dbo");
+                });
+
+            modelBuilder.Entity("StarWarsResistence.Model.Entities.Localizacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdRebelde")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double");
+
+                    b.Property<string>("local")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Localizacao", "dbo");
+                });
+
             modelBuilder.Entity("StarWarsResistence.Model.Entities.MyEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -46,12 +93,15 @@ namespace StarWarsResistence.Model.Migrations
                     b.Property<string>("nome")
                         .HasColumnType("text");
 
+                    b.Property<string>("nomeBase")
+                        .HasColumnType("text");
+
                     b.Property<int>("statusRebelde")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rebeldes");
+                    b.ToTable("Rebelde", "dbo");
                 });
 #pragma warning restore 612, 618
         }

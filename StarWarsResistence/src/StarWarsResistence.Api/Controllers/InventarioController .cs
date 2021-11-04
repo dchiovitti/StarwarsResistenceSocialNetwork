@@ -38,12 +38,15 @@ namespace StarWarsResistence.Api.Controllers
         /// Negociar itens Inventario entre Rebeldes
         /// </summary>
         /// <response code="200">Returns IEnumerable of <see cref="Model.Entities.Inventario"/></response>
-        [HttpPut]
+        [HttpGet]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
-        public IActionResult NegociarItensEntreRebeldes(int idRebelde1,int idRebelde2, List<Model.Entities.Inventario> listaInventario1, List<Model.Entities.Inventario> listaInventario2)
+        public IActionResult NegociarItensEntreRebeldes(int idRebelde1,int idRebelde2, List<Model.Entities.Inventario> listaInventario1e2)
         {
             List<Model.Entities.Inventario> itensRebelde1 = _context.Inventario.Where(itensRebelde1 => itensRebelde1.Id == idRebelde1).ToList();
             List<Model.Entities.Inventario> itensRebelde2 = _context.Inventario.Where(itensRebelde2 => itensRebelde2.Id == idRebelde2).ToList();
+
+            List<Model.Entities.Inventario> listaInventario1 = _context.Inventario.Where(listaInventario1 => listaInventario1.Id == idRebelde1).ToList();
+            List<Model.Entities.Inventario> listaInventario2 = _context.Inventario.Where(listaInventario2 => listaInventario2.Id == idRebelde2).ToList();
 
 
             var StatusRebelde1 = _context.Rebeldes.Cast<Model.Entities.Rebelde>().Where(row => row.Id  == idRebelde1).Select(row => new { row.statusRebelde}).FirstOrDefault();

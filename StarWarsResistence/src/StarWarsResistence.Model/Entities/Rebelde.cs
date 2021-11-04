@@ -15,9 +15,6 @@ namespace StarWarsResistence.Model.Entities
         
         public Genero genero { get; set; }
 
-        //public int idLocalizacao { get; set; }
-        [NotMapped]
-        public Inventario listaInventario { get; set; }
         
         public StatusRebelde statusRebelde { get; set; }
 
@@ -35,13 +32,13 @@ namespace StarWarsResistence.Model.Entities
                 Longitude = longitude;
             }
         }
-        public struct Inventario
+        private struct Inventario
         {
             public int CodigoItem;
             public string Item;
             public int Pontos;
             public int Quantidade;
-            public Inventario(int codigoItem, string item, int pontos, int quantidade)
+            private Inventario(int codigoItem, string item, int pontos, int quantidade)
             {
                 CodigoItem = codigoItem;
                 Item = item;
