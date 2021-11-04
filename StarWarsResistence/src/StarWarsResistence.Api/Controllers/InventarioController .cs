@@ -38,7 +38,7 @@ namespace StarWarsResistence.Api.Controllers
         /// Negociar itens Inventario entre Rebeldes
         /// </summary>
         /// <response code="200">Returns IEnumerable of <see cref="Model.Entities.Inventario"/></response>
-        [HttpGet]
+        [HttpPut]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
         public IActionResult NegociarItensEntreRebeldes(int idRebelde1,int idRebelde2, List<Model.Entities.Inventario> listaInventario1e2)
         {

@@ -28,7 +28,7 @@
             </summary>
             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Model.Entities.Rebelde"/></response>
         </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController3.ListarPontosPerdidos">
+        <member name="M:StarWarsResistence.Api.Controllers.Relatorio3Controller.ListarPontosPerdidos">
             <summary>
             Listar Quantidade de pontos dos rebeldes traidores
             </summary>
@@ -40,13 +40,13 @@
             </summary>
             <response code="200">Returns IEnumerable of <see cref="T:StarWarsResistence.Api.Rebelde"/></response>
         </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController1.ListarPercentualStatus(StarWarsResistence.Model.Entities.Rebelde.StatusRebelde)">
+        <member name="M:StarWarsResistence.Api.Controllers.Relatorio1Controller.ListarPercentualStatus(StarWarsResistence.Model.Entities.Rebelde.StatusRebelde)">
              <summary>
             Listar Percentual de Aliados ou Traidores conforme status recebido
              </summary>
              <response code="200">Returns string</response>
         </member>
-        <member name="M:StarWarsResistence.Api.Controllers.RelatorioController2.ListarMediaRecursosPorRebelde">
+        <member name="M:StarWarsResistence.Api.Controllers.Relatorio2Controller.ListarMediaRecursosPorRebelde">
              <summary>
             Listar Média de recursos por rebelde e por tipo de recurso
              </summary>

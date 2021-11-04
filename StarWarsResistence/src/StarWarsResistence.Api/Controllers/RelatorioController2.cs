@@ -13,17 +13,17 @@ namespace StarWarsResistence.Api.Controllers
 {
     [ApiController]
     [Route("v1/[controller]")]
-    public class RelatorioController2 : ControllerBase
+    public class Relatorio2Controller : ControllerBase
     {
      
         //private static List<Rebelde> rebeldes = new List<Rebelde>();
 
-        private readonly ILogger<RelatorioController2> _logger;
+        private readonly ILogger<Relatorio2Controller> _logger;
         //private readonly IDapperRepository _dapperRepository;
         private readonly IApiRepository _apiRepository;
         private readonly ApiContext _context;
         //IDapperRepository dapperRepository,
-        public RelatorioController2(ILogger<RelatorioController2> logger,  IApiRepository apiRepository, ApiContext context)
+        public Relatorio2Controller(ILogger<Relatorio2Controller> logger,  IApiRepository apiRepository, ApiContext context)
         {
             _logger = logger;
            // _dapperRepository = dapperRepository;
@@ -32,64 +32,6 @@ namespace StarWarsResistence.Api.Controllers
         }
 
        
-        ///// <summary>
-        ///// Relatorio de Aliados e Traidores por status
-        ///// </summary>
-        ///// <response code="200">Returns IEnumerable of <see cref="Rebelde"/></response>
-        //[HttpGet("{statusRebelde}")]
-        //[ProducesResponseType(typeof(IEnumerable<Model.Entities.Rebelde>), (int)HttpStatusCode.OK)]
-        //public IActionResult Search( Model.Entities.Rebelde.StatusRebelde statusRebelde)
-        //{
-        //    List<Model.Entities.Rebelde> relatorio = new List<Model.Entities.Rebelde>();
-
-        //    foreach (Model.Entities.Rebelde rebelde in _context.Rebeldes)
-        //    {
-
-        //        if(rebelde.statusRebelde == statusRebelde)
-        //        {
-        //            relatorio.Add(rebelde);
-        //        }
-        //    }
-
-        //    if(relatorio.Count() > 0)
-        //    {
-        //        return Ok(relatorio);
-        //    }
-        //    return NotFound();
-            
-
-        //}
-
-
-
-        ///// <summary>
-        /////Listar Percentual de Aliados ou Traidores conforme status recebido
-        ///// </summary>
-        ///// <response code="200">Returns string</response>
-
-
-        //[HttpGet]
-        //[ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
-        //public IActionResult ListarPercentualStatus(Model.Entities.Rebelde.StatusRebelde status)
-
-        //{
-       
-        //    List<Model.Entities.Rebelde> rebeldesPorStatus = _context.Rebeldes.Where(row => row.statusRebelde == status).ToList();
-            
-        //    List<Model.Entities.Rebelde> totalRebeldes= _context.Rebeldes.ToList();
-
-        //    float qtdTotalRebeldes = totalRebeldes.Count();
-
-        //    float qtdRebeldesPorStatus = rebeldesPorStatus.Count();
-
-        //    float percentualRebeldesPorStatus = (qtdRebeldesPorStatus / qtdTotalRebeldes) * 100;
-
-        //    string statustxt = status.Equals(Model.Entities.Rebelde.StatusRebelde.Aliado)? "Aliado " + percentualRebeldesPorStatus.ToString() : "Traidor " + percentualRebeldesPorStatus.ToString();
-
-        //    var result = statustxt;
-
-        //    return Ok(result);
-        //}
 
         /// <summary>
         ///Listar Média de recursos por rebelde e por tipo de recurso
@@ -135,51 +77,7 @@ namespace StarWarsResistence.Api.Controllers
             return Ok(result);
         }
 
-        ///// <summary>
-        ///// Listar Quantidade de pontos dos rebeldes traidores
-        ///// </summary>
-        ///// <response code="200">Returns string</response>
-
-        //[HttpGet]
-        //[ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
-        //public IActionResult ListarPontosPerdidos()
-        //{
-
-        //    //Listar Quantidade de pontos dos rebeldes traidores
-
-        //    //1 - Listar os traidores
-
-        //    List<Model.Entities.Rebelde> lstTraidores = _context.Rebeldes.Where(row => row.statusRebelde.Equals("1")).ToList();
-
-        //    //Listar o Inventario
-
-        //    List<Model.Entities.Inventario> lstItens = _context.Inventario.ToList();
-
-        //    //2 - Contar os pontos que os traidores tem no inventario
-
-        //    float pontosPerdidos = 0;
-
-        //    foreach (Model.Entities.Rebelde item in lstTraidores)
-        //    {
-        //        //1 - subtrair o item da Lista do Rebelde1
-        //        foreach (Model.Entities.Inventario itemNovo in lstItens)
-        //        {
-        //            if (item.Id == itemNovo.idRebelde)
-        //            {
-        //                pontosPerdidos += itemNovo.Quantidade * itemNovo.Pontos;
-        //                //break; não para porque pode ter mais de um item
-        //            }
-        //        }
-              
-        //    }
-
-        //    string statustxt = "Pontos perdido para os traidores: =>" + pontosPerdidos.ToString();
-
-        //    var result = statustxt;
-
-        //    return Ok(result);
-        //}
-
+       
 
     }
 }
